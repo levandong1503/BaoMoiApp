@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="body-lg">
+    <div class="login-page" >
+        <div class="form" >
+          
+          <div class="login-form">
+            <input id="username-login" type="text" placeholder="tên đăng nhập"/>
+            <input id="password-login" type="password" placeholder="mật khẩu"/>
+            <button id="btn-login">Đăng nhập</button>
+              <span style="color:red; font-style:italic" id="valid-login"></span>
+            <p class="message">Chưa có <a href="./register.html">Đăng ký ngay</a></p>
+          </div>
+        </div>
+
+       <div >
+        <a href="./index.html"><img class="img-logo" src="./Images/bao-moi-logo.png" alt=""></a>
+       </div>
+      </div>
+      <script src="./js/login.js">
+        
+      </script>
+</body>
+</html>
+<style>
+  input:focus{
+    border: 1px solid red;
+  }
+</style>

@@ -1201,7 +1201,9 @@ display: inline-block;
     text-align: center;
 }
 .img-infor-news{
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
 }
 .author{
     font-size: 24px;
@@ -1972,7 +1974,7 @@ textarea{
     height: 150px;
     padding: 0;
 }
-#title,#desc{
+#title,#desc,#cate{
     width: 100%;
     padding:20px 0 20px 20px;
     box-sizing: border-box;

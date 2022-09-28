@@ -317,9 +317,10 @@
         margin-left: 10px;
     }
     
-    .bottom-other{
+    .bottom-other,.bottom-other-end{
         display: flex;
         width: 100%;
+        
         flex-direction: row;
         margin-bottom: 15px;
         border-bottom: 1px solid #e9ecef;
@@ -334,7 +335,7 @@
     .bt-o-right{
         margin-left: 10px ;
     }
-    
+}
     
 
 
@@ -393,7 +394,24 @@
     }
 
 
-    
+    .dialog{
+        font-size: 25px;
+    }
+    .col.col-1::before,.col.col-2::before{
+        width: auto;
+        flex-basis: 20% !important;
+    }
+
+
+    .col.col-1::before{
+        width: auto;
+        flex-basis: auto !important;
+        flex-shrink: 1;
+    }
+    .col.col-2::before{
+        flex-basis: auto !important;
+        flex-shrink: 0;
+    }
 }
 
 
@@ -404,7 +422,7 @@
 }
 
 
-}
+
  
 
 @media only screen and (max-width:739px) {
@@ -422,6 +440,9 @@
     .topic_card{
         max-width: 100%;
     }
+    .dialog{
+        font-size: 20px;
+    }
 
 }
 
@@ -431,6 +452,10 @@
     .ul-nav li:nth-last-child(3),
     .ul-nav li:nth-last-child(4) {
         display: none;
+    }
+
+    .dialog{
+        font-size: 18px;
     }
 }
 
@@ -450,7 +475,24 @@
     .topic_card{
         max-width: 100%;
     }
-
+    .btn-attention{
+        text-align: center;
+    }
+    .col.col-3::before{
+        display: none;
+    }
+    .col.col-1::before{
+        width: auto;
+        flex-basis: auto !important;
+        flex-shrink: 1;
+    }
+    .col.col-2::before{
+        flex-basis: auto !important;
+        flex-shrink: 0;
+    }
+    .dialog{
+        width: 80%;
+    }
 }
 
 

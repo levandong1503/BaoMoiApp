@@ -83,25 +83,113 @@ fetch("https://127.0.0.1:5001/api/Categories")
 /*   update news   */
 let updateBtn = document.getElementById("sendUpdate")
 updateBtn.onclick = () => {
-    let titleInp = document.getElementById("title");
-    let descInp = document.getElementById("desc");
-    let contentInp = document.getElementById("content");
-    let CateInp = document.getElementById("cate");
-    let ImgInpt = document.getElementById("image")
-    fetch(`https://127.0.0.1:5001/api/News?id=${newsId}`,
-    {
-        method:"PUT",
-       body: JSON.stringify({
-            cateId: CateInp.value,
-            title: titleInp.value,
-            description : descInp.value,
-            content: "rst",
-            img: dataImg
-       }),
-       headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Accept': 'application/json'
-    }   
-    })
-
+    let dialogContainer =document.getElementById("dialog-container");
+    let app = document.getElementById("app");
+    dialogContainer.style.display = "block"
+    dialogContainer.style.top =  `${window.scrollY}px`;
+    console.log(dialogContainer.style.top);
+    app.style.overflow = "hidden"
 }
+let agree = document.getElementById("success")
+let cancel = document.getElementById("cancel")
+agree.onclick = () => {
+    let dialogContainer =document.getElementById("dialog-container");
+    dialogContainer.style.display = "none";
+    let app = document.getElementById("app");
+    app.style.overflow = "auto"
+        let titleInp = document.getElementById("title");
+        let descInp = document.getElementById("desc");
+        let contentInp = document.getElementById("content");
+        let CateInp = document.getElementById("cate");
+        //let ImgInpt = document.getElementById("image")
+        let rst=''
+        let ListValueCnt = contentInp.value.split('\n');
+        if(titleInp.value == ''){
+            let valid = document.getElementById("valid-title");
+            valid.innerHTML = "(*) Bạn chưa nhập tiêu đề bài báo"
+        }
+        if(descInp.value == ''){
+            let valid = document.getElementById("valid-desc");
+            valid.innerHTML = "(*) Bạn chưa nhập môt tả bài viết"
+        }
+        if(contentInp.value == ''){
+            let valid = document.getElementById('valid-content');
+            valid.innerHTML = "(*) Bạn chưa nhập nội dung bài viết"
+        }
+        
+        ListValueCnt.map( (item) => rst  +=  "<p>" + item + "</p>" )
+        if(titleInp.value != '' && descInp.value != '' && contentInp.value != '')
+        fetch(`https://127.0.0.1:5001/api/News?id=${newsId}`,
+        {
+            method:"PUT",
+           body: JSON.stringify({
+                cateId: CateInp.value,
+                title: titleInp.value,
+                description : descInp.value,
+                content: rst,
+                img: dataImg
+           }),
+           headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+            'Accept': 'application/json'
+        }   
+        }).then((res) => {
+            let status = document.getElementById("valueR");
+            if(res.status == 200){
+                //window.alert("Bạn đã sửa bài viết thành công")
+                status.style.color = "#155724";
+                status.style.padding = ".75rem 1.25rem"
+                status.style.backgroundColor = "#d4edda";
+                status.innerHTML = `Bài báo ${titleInp.value} đã được sửa thành công`;
+            }
+            else{
+               // window.alert("Bạn không sửa được. Kiểm tra lại!")
+                status.style.color = "#f8d7da";
+                status.style.backgroundColor = "#721c24";
+                status.style.padding = ".75rem 1.25rem"
+                status.innerHTML =  `Bài báo ${titleInp.value} không được sửa, kiểm tra lại`
+            }
+        })
+}
+
+cancel.onclick = () => {
+    let dialogContainer =document.getElementById("dialog-container");
+    dialogContainer.style.display = "none";
+    let app = document.getElementById("app");
+    app.style.overflow = "auto"
+}
+
+
+// updateBtn.onclick = () => {
+//     let titleInp = document.getElementById("title");
+//     let descInp = document.getElementById("desc");
+//     let contentInp = document.getElementById("content");
+//     let CateInp = document.getElementById("cate");
+//     let ImgInpt = document.getElementById("image")
+//     let rst=''
+//     let ListValueCnt = contentInp.value.split('\n');
+//     ListValueCnt.map( (item) => rst  +=  "<p>" + item + "</p>" )
+//     fetch(`https://127.0.0.1:5001/api/News?id=${newsId}`,
+//     {
+//         method:"PUT",
+//        body: JSON.stringify({
+//             cateId: CateInp.value,
+//             title: titleInp.value,
+//             description : descInp.value,
+//             content: rst,
+//             img: dataImg
+//        }),
+//        headers: {
+//         'Content-Type': 'application/json; charset=utf-8',
+//         'Accept': 'application/json'
+//     }   
+//     }).then((res) => {
+//         if(res.status == 200){
+//             window.alert("Bạn đã sửa bài viết thành công")
+//         }
+//         else{
+//             window.alert("Bạn không sửa được. Kiểm tra lại!")
+//         }
+//     })
+
+// }

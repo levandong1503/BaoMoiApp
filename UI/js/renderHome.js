@@ -30,6 +30,7 @@ if (document.title == "Home") {
                                             <span>${item.createAt}</span>
                                             
                                         </div>
+                                        <p class="intro-cnt">${item.description}</p>
                                     
                                 `
                 }
@@ -69,7 +70,7 @@ if (document.title == "Home") {
                 let cateDetail = item.data.map( (item,index) => {
                         return (
                             `
-                                        <div class="bottom-other" id="${item.id}" onclick="newsDetail(event)">
+                                        <div class="${(index+1)%3==0?"bottom-other-end":"bottom-other"}" id="${item.id}" onclick="newsDetail(event)">
                                             <div class="bt-o-img img-hover-zoom">
                                                 <a href="#"><img src="${item.img}" alt=""></a>
                                             </div>

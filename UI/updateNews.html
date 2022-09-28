@@ -16,7 +16,7 @@
     </header>
     <div class="content-layout">
         <section class="feedback">
-            <h1>Thêm bài báo</h1>
+            <h1>Sửa bài báo</h1>
             
 
             <form method="post" action="#">
@@ -25,17 +25,17 @@
                 </div>
                 <div class="element-form">
                     <div class="form-lable">Tiêu đề</div>
-                    <input type="text" name="title" id="title">
+                    <input type="text"  id="title">
                 </div>
 
                 <div class="element-form">
                     <div class="form-lable">Mô tả</div>
-                    <input type="text" name="email" id="desc">
+                    <input type="text"  id="desc">
                 </div>
 
                 <div class="element-form">
                     <div class="form-lable">Nội dung</div>
-                    <textarea id="content" name="content">
+                    <textarea id="content" >
                     </textarea>
                 </div>
 
@@ -49,10 +49,23 @@
                 <button type="button" id="sendUpdate" class="btn btn-warning">Sửa bài báo</button>
             </form>
         </section >
+        <div id="valueR" style="margin:10px 0;"></div>
     </div>
-    <div id="valueR">
 
-    </div>
+    <div id="dialog-container" style="top:0; ">
+        <div class="dialog ">
+            <div class="header-attention">Thông báo</div>
+            <div class="content-attention">
+                Bạn có chắc muốn xóa bài viết không
+            </div>
+            <div class="btn-attention">
+                <button class="btn btn-primary"  id="success">Đồng ý</button>
+                <button class="btn btn-warning" id="cancel">Hủy</button>
+            </div>
+        </div>
+    </div> 
+    
+    
     <footer>
         
     </footer>

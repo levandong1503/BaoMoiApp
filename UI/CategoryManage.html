@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,49 +12,47 @@
     <link rel="stylesheet" href="./site-responsive.css" type="text/css">
 
 </head>
+
 <body id="app">
     <header>
 
     </header>
 
     <div id="mng-c">
-        
-    <div class="container">
-        <button class="btn btn-primary btn-add">Add</button>
-         
-        <ul class="responsive-table">
-            <li class="table-header">
-                <div class="col col-1">STT</div>
-                <div class="col col-2">Name</div>  
-                <div class="col col-3"> </div>  
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="STT">1</div>
-                <div class="col col-2" data-label="Name">Năng lượng tích cực</div> 
-                <div class="col col-3" >
-                    <button class="btn btn-danger">Delete</button>
-                    <button class="btn btn-warning">Edit</button>
-                </div> 
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="STT">2</div>
-                <div class="col col-2" data-label="Name">Ẩm thực</div> 
-                <div class="col col-3" >
-                    <button class="btn btn-danger">Delete</button>
-                    <button class="btn btn-warning">Edit</button>
-                </div> 
-            </li>
-        </ul>
-     
+
+        <div class="container">
+            <input onchange="handleEvent.AddC(event)" id="data-input" />
+
+            <button id=" btn-add" class="btn btn-primary">add</button>
+
+            <ul class="responsive-table">
+                <li class="table-header">
+                    <div class="col col-1">STT</div>
+                    <div class="col col-2">Name</div>
+                    <div class="col col-3"> </div>
+                </li>
+                <li class="table-row">
+                    <div class="col col-1" data-label="STT">1</div>
+                    <div class="col col-2" data-label="Name">Năng lượng tích cực</div>
+                    <div class="col col-3">
+                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-warning">Edit</button>
+                    </div>
+                </li>
+                <div id="categories"></div>
+            </ul>
 
 
-    <footer>
-        
-    </footer>
+
+            <footer>
+
+            </footer>
 
 
-    <script src="./js/header.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/footer.js"></script>
+            <script src="./js/header.js"></script>
+            <script src="./js/script.js"></script>
+            <script src="./js/MCategory.js"></script>
+            <script src="./js/footer.js"></script>
 </body>
+
 </html>

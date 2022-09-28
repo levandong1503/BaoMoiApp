@@ -7,11 +7,11 @@ nav.addEventListener('click', function () {
     var cls = dropLayout.getAttribute("class");
     var index = cls.indexOf("dropsupport");
 
-    if (index == -1) {
+    if (index == -1) { /*ẩn đi*/
         dropLayout.setAttribute("class", cls + " dropsupport");
         isDropNav = false;
     }
-    else {
+    else { /*hiện lên*/
         dropLayout.setAttribute("class", cls.replace(" dropsupport", ""))
         isDropNav = true;
 
@@ -40,9 +40,27 @@ window.onresize = function () {
         //console.log("is body hidden: "+ isBodyHidden);
     }
     if (window.innerWidth >= 970) {
-        var body = document.getElementById("app");
-        body.setAttribute("style", "  ")
-        isBodyHidden = false;
+        let dialog = document.getElementById("dialog-container");
+        if(dialog != null){
+            if(dialog.style.display == "block"){
+                var body = document.getElementById("app");
+                body.setAttribute("style", "overflow:hidden");
+                isBodyHidden = true;
+                console.log("ban dang su dung dialog");
+            }
+            else{
+                var body = document.getElementById("app");
+                body.setAttribute("style", "  ")
+                isBodyHidden = false;
+                console.log("ban dang tat su dung dialog");
+            }
+        }
+        else{
+            var body = document.getElementById("app");
+            body.setAttribute("style", "  ")
+            isBodyHidden = false;
+            console.log("trang khong su dung dialog");
+        }
     }
 }
 
@@ -158,7 +176,7 @@ linkSearch.onclick = () => {
 /*link to news detail*/
 function newsDetail(e,t) {
     //console.log(e.srcElement);
-    let element = document.createElement('div');
+    //let element = document.createElement('div');
     e.path.map((item) => {
         if(item.onclick != null){
             localStorage.setItem("newsDetail",item.id);

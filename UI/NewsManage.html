@@ -15,41 +15,7 @@
 
     </header>
     <div class="content-layout">
-        <section class="feedback">
-            <h1>Thêm bài báo</h1>
-            
-
-            <form method="post" action="#">
-                <div class="element-form" id="list-cate">
-                    <div class="form-lable">Tiêu đề</div>
-                    <input type="text" name="title" id="title">
-                </div>
-                <div class="element-form">
-                    <div class="form-lable">Tiêu đề</div>
-                    <input type="text" name="title" id="title">
-                </div>
-
-                <div class="element-form">
-                    <div class="form-lable">Mô tả</div>
-                    <input type="text" name="email" id="desc">
-                </div>
-
-                <div class="element-form">
-                    <div class="form-lable">Nội dung</div>
-                    <textarea id="content" name="content">
-                    </textarea>
-                </div>
-
-                <div class="element-form">
-                    <div class="form-lable">Hình ảnh</div>
-                    <input type="file" name="file" id="image">
-                    <div >
-                        <img width="380px" id="showImg" alt="Thêm ảnh để xem trước"  style="margin:10px auto; display:block;">
-                    </div>
-                </div>
-                <button type="button" id="sendAdd" class="btn btn-primary">Đăng bài báo</button>
-            </form>
-        </section >
+        <a type="button"  href="./addNews.html" class="btn btn-primary">Đăng bài báo</a>
     </div>
     <div id="valueR">
 
@@ -57,7 +23,18 @@
     <footer>
         
     </footer>
-
+    <div id="dialog-container" style="top:0; ">
+        <div class="dialog ">
+            <div class="header-attention">Thông báo</div>
+            <div class="content-attention">
+                Bạn có chắc muốn xóa bài viết không
+            </div>
+            <div class="btn-attention">
+                <button class="btn btn-primary"  id="success">Đồng ý</button>
+                <button class="btn btn-warning" id="cancel">Hủy</button>
+            </div>
+        </div>
+    </div> 
     <script src="./js/header.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/footer.js"></script>

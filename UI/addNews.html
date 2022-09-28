@@ -21,26 +21,49 @@
             
 
             <form method="post" action="#">
+                <div class="element-form" id="list-cate">
+                    <div class="form-lable">Tiêu đề</div>
+                    <input type="text"  id="title">
+                    
+                </div>
                 <div class="element-form">
                     <div class="form-lable">Tiêu đề</div>
-                    <input type="text" name="title" id="title">
+                    <input type="text"  id="title">
+                    <div class="valid">
+                        <span style="color:red; font-style:italic" id="valid-title"></span>
+                    </div>
                 </div>
 
                 <div class="element-form">
                     <div class="form-lable">Mô tả</div>
-                    <input type="text" name="email" id="desc">
+                    <input type="text"  id="desc">
+                    <div class="valid">
+                        <span style="color:red; font-style:italic" id="valid-desc"></span>
+                    </div>
                 </div>
 
                 <div class="element-form">
                     <div class="form-lable">Nội dung</div>
                     <textarea id="content" name="content"></textarea>
+                    <div class="valid">
+                        <span style="color:red; font-style:italic" id="valid-content"></span>
+                    </div>
                 </div>
 
                 <div class="element-form">
                     <div class="form-lable">Hình ảnh</div>
                     <input type="file" name="file" id="image">
+                    <div >
+                        <img width="380px" id="showImg" alt="Thêm ảnh để xem trước"  style="margin:10px auto; display:block;">
+                    </div>
+                    <div class="valid">
+                        <span style="color:red; font-style:italic" id="valid-img"></span>
+                    </div>
                 </div>
-                <button type="button" id="send" class="btn btn-primary">Đăng bài báo</button>
+                <div id="status" style="margin:5px;">
+
+                </div>
+                <button type="button" id="sendAdd" class="btn btn-primary">Đăng bài báo</button>
             </form>
         </section >
     </div>
@@ -53,5 +76,6 @@
     <script src="./js/header.js"></script>
     <script src="./js/script.js"></script>  
     <script src="./js/footer.js"></script>
+    <script src="./js/addNews.js"></script>
 </body>
 </html>

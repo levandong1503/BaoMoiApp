@@ -129,13 +129,13 @@ if(document.cookie != ''){
         }
         console.log(drowdownMenu.style.display);
     }
-    console.log(document.cookie);
+    
 }
 
 
 /*logout*/
 let logout = document.getElementsByClassName("logout")[0];
-console.log(logout);
+ 
 if(logout !=null && document.cookie != ''){
     logout.onclick = () => {
         document.cookie = "username" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
@@ -161,6 +161,7 @@ const ESearch = (e) => {
         let seacrchInp = document.getElementById('search').value;
         localStorage.setItem("search",seacrchInp) 
         window.location = './search.html'
+        
     }
 } 
 

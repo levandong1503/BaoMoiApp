@@ -1,3 +1,8 @@
+/*block not permision*/
+if(document.cookie == ''){
+    window.location = "./index.html"
+}
+
 /*load list category*/
 fetch("https://127.0.0.1:5001/api/Categories")
 .then(r => r.json())
@@ -15,7 +20,7 @@ fetch("https://127.0.0.1:5001/api/Categories")
 
 
 /*add news*/
-let sendAdd = document.getElementById("sendAdd");
+let sendAdd = document.getElementById("sendAdd"); // nut add
 
 //dich anh thanh base64
 let imgInp = document.getElementById("image");
@@ -47,7 +52,7 @@ sendAdd.onclick = () => {
     let descInp = document.getElementById("desc");
     let contentInp = document.getElementById("content");
     let CateInp = document.getElementById("cate");
-    let status = document.getElementById("status")
+    let status = document.getElementById("status")  // valid du lieu
     let ListValueCnt = contentInp.value.split('\n');
     let rst=''
     ListValueCnt.map( (item) => rst  +=  "<p>" + item + "</p>" )
@@ -71,6 +76,11 @@ sendAdd.onclick = () => {
         let valid = document.getElementById('valid-content');
         valid.innerHTML = "(*) Bạn chưa nhập nội dung bài viết"
     }
+/*block not permision*/
+if(document.cookie == ''){
+    window.location = "./index.html"
+}
+    
     if(dataImg == ''){
         let valid = document.getElementById('valid-img');
         valid.innerHTML = "(*) Bạn chưa nhập hình ảnh bài viết"
@@ -90,6 +100,10 @@ sendAdd.onclick = () => {
                     status.style.padding = ".75rem 1.25rem"
                     status.style.backgroundColor = "#d4edda";
                     status.innerHTML = `Bài báo ${titleInp.value} đã được thêm thành công`;
+                    titleInp.value = '';
+                    descInp.value = '';
+                    contentInp.value = '';
+                    imgInp.src = './Images/image-available.jpg'
                 }
                 else{
                     status.style.color = "#f8d7da";

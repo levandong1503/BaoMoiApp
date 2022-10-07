@@ -18,41 +18,57 @@
 
     </header>
 
-    <div id="mng-c">
+    <div class="container">
 
-        <div class="container">
-            <input onchange="handleEvent.AddC(event)" id="data-input" />
+        <div class="data-input"> 
+            <input required id="data-input" />
+            <button id=" btn-add" onclick="handleEvent.AddC(event)" class="btn btn-primary">add</button>
 
-            <button id=" btn-add" class="btn btn-primary">add</button>
+        </div>
 
-            <ul class="responsive-table">
-                <li class="table-header">
-                    <div class="col col-1">STT</div>
-                    <div class="col col-2">Name</div>
-                    <div class="col col-3"> </div>
-                </li>
-                <li class="table-row">
-                    <div class="col col-1" data-label="STT">1</div>
-                    <div class="col col-2" data-label="Name">Năng lượng tích cực</div>
-                    <div class="col col-3">
-                        <button class="btn btn-danger">Delete</button>
-                        <button class="btn btn-warning">Edit</button>
-                    </div>
-                </li>
-                <div id="categories"></div>
-            </ul>
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">STT</div>
+                <div class="col col-2">Name</div>
+                <div class="col col-3"> </div>
+            </li>
+            <div id="categories"></div>
+
+        </ul>
+    </div>
+
+    <div aria-label="Page navigation">
+        <ul class="pagination">
+
+        </ul>
+    </div>
+
+    <div id="dialog-container" style="top:0; ">
+        <div class="dialog ">
+            <div class="header-attention">Thông báo</div>
+            <div class="content-attention">
+                Bạn có chắc muốn xóa bài viết không
+            </div>
+            <div class="btn-attention">
+                <button class="btn btn-primary"  id="success">Đồng ý</button>
+                <button class="btn btn-warning" id="cancel">Hủy</button>
+            </div>
+        </div>
+    </div> 
+
+    <div id="toast">
+
+    </div>
+
+    <footer>
+
+    </footer>
 
 
-
-            <footer>
-
-            </footer>
-
-
-            <script src="./js/header.js"></script>
-            <script src="./js/script.js"></script>
-            <script src="./js/MCategory.js"></script>
-            <script src="./js/footer.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/MCategory.js"></script>
+    <script src="./js/footer.js"></script>
 </body>
 
 </html>

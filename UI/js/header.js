@@ -5,7 +5,7 @@ header.innerHTML = `
 <a href="./index.html"><img src="./Images/bm-logo.png" width="100px"></a>
 
 <div  class="Search-content">
-    <input id="search" type="text" onkeypress="  ESearch(event)"  name="search" autocomplete="off" placeholder="Nhập nôi dung tìm kiếm">
+    <input id="search" type="text" onkeypress="ESearch(event)"  name="search" autocomplete="off" placeholder="Nhập nôi dung tìm kiếm">
     <!-- <ul class="search-result">
 
     </ul> -->
@@ -20,12 +20,12 @@ header.innerHTML = `
     <ul class="ul-nav">
         <li class="btn-square "><a class="" href="./index.html">NÓNG</a></li>
         <li><a class="btn-square" href="./newNews.html">MỚI</a></li>
-        <li><a class="btn-square" href="./videoPage.html">VIDEO</a></li>
-        <li><a class="btn-square" href="./topic.html">CHỦ ĐỀ</a></li>
+        <li><a class="btn-square" href="#">VIDEO</a></li>
+        <li><a class="btn-square" href="#">CHỦ ĐỀ</a></li>
 
-        <li><a class="btn-radius btn-choose" href="./positive-energy.html">Năng lượng tích cực</a></li>
-        <li><a class="btn-radius" href="./vietnam-discovery.html">Khám phá Việt Nam</a></li>
-        <li><a class="btn-radius" href="./world-discovery.html">Khám phá thế giới</a></li>
+        <li><a class="btn-radius btn-choose" href="#">Năng lượng tích cực</a></li>
+        <li><a class="btn-radius" href="#">Khám phá Việt Nam</a></li>
+        <li><a class="btn-radius" href="#">Khám phá thế giới</a></li>
         <li class="icon-dropdown" id="dropdown"><i class="fa fa-block-quote "></i></li>
     </ul>
 </nav>

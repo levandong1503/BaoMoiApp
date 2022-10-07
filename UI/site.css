@@ -25,6 +25,7 @@ div,p {
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 figure{
@@ -75,6 +76,7 @@ figure{
 .img-hover-zoom{
     overflow: hidden;
     display: inline-block;
+    cursor: pointer;
 }
 .img-hover-zoom img{   
     transition-duration:1s ; 
@@ -374,6 +376,7 @@ display: inline-block;
 
 
 /*Toan bo phan noi dung */
+.content-news,
 .content-layout{
     width: 970px;
     margin: 0 auto;
@@ -389,7 +392,7 @@ display: inline-block;
 }
 
 
-/*Mot bai viet ben trai*/
+/* *** Mot bai viet ben trai
 .main-content{ margin-bottom: 10px; }
 .main-content a{
     text-decoration: none;
@@ -409,11 +412,11 @@ display: inline-block;
 }
 .img-main-big a img{
     width:625px;
-}
+} */
 
-/* bai viet tren thanh ngang ben trai*/
-.row-infor{
-    /* display: flex; */
+/* *** bai viet tren thanh ngang ben trai*/
+/* .row-infor{
+    /* display: flex; /
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 10px ;
@@ -440,7 +443,8 @@ display: inline-block;
 }
 .title-element:hover{
     color:#2fa1b3;
-}
+} 
+*/
 
 /*noi dung bai viet ben trai dang cot*/
 .col-infor{
@@ -468,8 +472,8 @@ display: inline-block;
     font-size: 22px;
 }
 
-/*noi dung thanh hinh anh ben trai*/
-.img-bar-container{
+/* *** noi dung thanh hinh anh ben trai*/
+/* .img-bar-container{
     border-bottom: 1px solid #e9ecef;
     margin: 15px 0;
     flex-direction: column;
@@ -494,38 +498,17 @@ display: inline-block;
 }
 .title-img-bar{
     font-size: 22px;
-}
+} */
 
-/*Noi dung theo loai Kham pha viet nam*/
-.article-group{
+/* *** Noi dung theo loai Kham pha viet nam*/
+/* .article-group{
     margin:5px 0;
     border-bottom: 6px solid #f9f9f9;
     padding-bottom: 20px;
 }
-.article-group-title{
-    font-size: 24px;
-    color:#db562b ;
-    line-height: 24px;
-    margin: 10px 0;
-    display: block;
-    position: relative;
-}
-.article-group-title a{ margin-left: 8px; }
- .article-group-title::before{
-    content: "|";
-    display: inline-block;
-    position: absolute;
-    top: -1px;
-    left: -4px;
-    color: inherit;
-}
 
-.article-group-title:hover{
-    color: black;
-}
-/* .article-group-img-container{
-    float: left;
-} */
+
+
 .article-group-img-container{
     background-image: url(./Images/bg-bao-moi.png) ;
     background-position: 0 0;
@@ -587,7 +570,30 @@ display: inline-block;
 .ar-gr-full:hover{
     text-decoration: underline;
 }
-/*noi dung bai viet ben phai*/
+*/
+.article-group-title{
+    font-size: 24px;
+    color:#db562b ;
+    line-height: 24px;
+    margin: 10px 0;
+    display: block;
+    position: relative;
+}
+.article-group-title a{ margin-left: 8px; }
+ .article-group-title::before{
+    content: "|";
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: -4px;
+    color: inherit;
+    
+}
+.article-group-title:hover{
+    color: black;
+} 
+
+/*  *** noi dung bai viet ben phai*/
 .right-new{
     margin-bottom: 20px;
 }
@@ -637,8 +643,8 @@ display: inline-block;
 
 
 
-/*slide animation cho cac to bao doi tac*/
-.newspaper-show{
+/* *** slide animation cho cac to bao doi tac*/
+/* .newspaper-show{
     margin:40px 0;
     border: 1px solid #e9ecef;
     position: relative;
@@ -691,11 +697,11 @@ display: inline-block;
     width: 78px;
     height: 46px;
     
-}
+} */
 
 
-/*a phíc cổ vũ*/
-.img-aphich{
+/* *** aphíc cổ vũ*/
+/* .img-aphich{
     padding: 15px;
     width: auto;
     box-sizing: border-box;
@@ -704,10 +710,10 @@ display: inline-block;
 }
 .img-aphich img{
     width: 300px;
-}
+} */
 
-/*khung thong tin chinh phu*/
-.infor-gover{
+/* *** khung thong tin chinh phu*/
+/* .infor-gover{
     background-color: #f7f7f7;
     padding: 25px 15px 15px 20px;
     box-sizing: border-box;
@@ -768,10 +774,11 @@ display: inline-block;
     position: absolute;
     top:10px;
     left:0px;
-}
-/*tiện ích - nhiệt độ*/
-/*tiên ích khác lịch, ngoại tệ... */
-.utility-option,.temp_{
+} */
+
+/* *** tiện ích - nhiệt độ*/
+/* *** tiên ích khác lịch, ngoại tệ... */
+/* .utility-option,.temp_{
     background-color: #f7f7f7;
     padding: 15px;
     box-sizing: border-box;
@@ -834,7 +841,7 @@ display: inline-block;
     text-align: center;
     
 }
-.u-col-1,.u-col-2{  /*cột 1 cột 2*/
+.u-col-1,.u-col-2{  cột 1 cột 2
     width: 50%;
     box-sizing: border-box;
     float: left;
@@ -847,10 +854,10 @@ display: inline-block;
 }
 .u-col-1 a:hover,.u-col-2 a:hover{
     color: #2b94a5;
-}
+} */
 
-/**hot trend*/
-.trend{
+/* *** hot trend*/
+/* .trend{
     box-sizing: border-box;
     padding:15px;
     text-align:  center;
@@ -940,7 +947,7 @@ display: inline-block;
     content: "▴";
     font-size: 13px;
     color: #5bb83e ;
-}
+} */
 
 /*NÓNG 24H Trang chu*/
 .hot-new-24h-container{ 
@@ -1039,7 +1046,7 @@ display: inline-block;
 .license p{
     direction: rtl;
 }
-/*trang năng lượng tích cực positive-energy.html*/
+/* ***  trang năng lượng tích cực positive-energy.html*/
 .bg-img-pe{
     background-image: url(./Images/bg-positive-energy.jpg);
     background-repeat: no-repeat;
@@ -1196,7 +1203,7 @@ display: inline-block;
 }
 .infor-news,.img-explan{
     font-size: 20px;
-    line-height: 24px;
+    line-height: 28px;
     margin-bottom: 22px ;
 }
 .img-explan{
@@ -1917,6 +1924,19 @@ h2 small {
     background-color: #0069d9;
     border-color: #0062cc;
 }
+.btn-purle {
+    color: #fff;
+    background-color: #59359a;
+    border-color: #57339b;
+    margin: 12px 0;
+
+}
+
+.btn-purle:hover {
+    color: #fff;
+    background-color: #432874;
+    border-color: #3f256f;
+}
 .col-1 {
     flex-basis: 10%;
 }
@@ -1974,7 +1994,7 @@ textarea,input[type="text"],input[type="email"]{
 
 textarea{
     width: 100%;
-    height: 180px;
+    height: 250px;
     padding: 10px;
 }
 #title,#desc,#cate{
@@ -1983,10 +2003,13 @@ textarea{
     box-sizing: border-box;
     
 }
-
-#sendAdd,#sendUpdate{
-    display: block;
-    margin: 0 auto;
+#title:focus,#desc:focus,#cate:focus,#content:focus{
+    outline: none;
+    border: 1.5px solid #237784;
+}
+#sendAdd,#sendUpdate,#sendBack{
+    display: inline-block;
+    margin: 10px;
 }
 
 .element-form{
@@ -1997,6 +2020,7 @@ textarea{
 .input-c{
     border: none;
     font-size: 16px;
+    padding: 5px 5px; 
 }
 
 .btn-outline-success {
@@ -2038,6 +2062,7 @@ textarea{
     animation-name: showDelete;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    z-index: 999999999;
 }
 @keyframes showDelete {
     0%{top:20%}
@@ -2062,4 +2087,153 @@ textarea{
 }
 .btn-attention{
     text-align: right;
+}
+
+
+#add_edit {
+    display: inline;
+}
+
+
+.input-c {
+    border: none;
+    font-size: 16px;
+}
+
+.input-c:focus-visible {
+    border: #fff;
+
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+
+.page {}
+
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+    border-radius: 0.25rem;
+    margin: 23px 0  ;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.active { 
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.data-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#data-input{
+    font-size: 15px;
+    height: 29px;
+    border-radius: 5px;
+    width: 350px;
+    max-width: 230px;
+    padding: 5px 5px;
+    margin-right: 15px;
+}
+
+/* Toast */
+
+#toast{
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 99999;
+}
+
+.toast+.toast {
+    margin-top: 23px;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.07);
+    width: 400px;
+    max-width: 450px;
+    animation: slideInLeft ease 0.7s, fadeOut linear 1s 3s forwards;
+    transition: all linear 0.25s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
+
+.toast_message {
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.toast-success {
+    color: #47d864;
+}
+
+.toast-warning{
+    color: #ffcc00;
+}
+
+.toast-err{
+    color: #cc3300;
+}
+
+.toast_msg { 
+}
+
+.toast_message {
+    margin-left: 11px;
+    margin-top: 4px;
+
+}
+
+.toast_close {
+    padding: 0 17px;
+    color: rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    font-size: 21px;
 }

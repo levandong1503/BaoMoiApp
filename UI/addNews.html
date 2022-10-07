@@ -20,10 +20,8 @@
             <h1>Thêm bài báo</h1>
             
 
-            <form method="post" action="#">
+            <form method="post" action="#" autocomplete="off">
                 <div class="element-form" id="list-cate">
-                    <div class="form-lable">Tiêu đề</div>
-                    <input type="text"  id="title">
                     
                 </div>
                 <div class="element-form">
@@ -38,13 +36,13 @@
                     <div class="form-lable">Mô tả</div>
                     <input type="text"  id="desc">
                     <div class="valid">
-                        <span style="color:red; font-style:italic" id="valid-desc"></span>
+                        <span style="color:red; font-style:italic"  id="valid-desc"></span>
                     </div>
                 </div>
 
                 <div class="element-form">
                     <div class="form-lable">Nội dung</div>
-                    <textarea id="content" name="content"></textarea>
+                    <textarea id="content" ></textarea>
                     <div class="valid">
                         <span style="color:red; font-style:italic" id="valid-content"></span>
                     </div>
@@ -54,16 +52,20 @@
                     <div class="form-lable">Hình ảnh</div>
                     <input type="file" name="file" id="image">
                     <div >
-                        <img width="380px" id="showImg" alt="Thêm ảnh để xem trước"  style="margin:10px auto; display:block;">
+                        <img width="380px" src="./Images/image-available.jpg" id="showImg" alt="Thêm ảnh để xem trước"  style="margin:10px auto; display:block;">
                     </div>
                     <div class="valid">
                         <span style="color:red; font-style:italic" id="valid-img"></span>
                     </div>
                 </div>
-                <div id="status" style="margin:5px;">
+                <div id="button" style="margin:5px; text-align: center;">   
+                    <button type="button" id="sendAdd" class="btn btn-primary">Đăng bài báo</button>
+                    <a type="button" id="sendBack" href="./NewsManage.html" class="btn btn-warning">Quay lại </a>
+                </div>  
+                <div id="status">
 
                 </div>
-                <button type="button" id="sendAdd" class="btn btn-primary">Đăng bài báo</button>
+                
             </form>
         </section >
     </div>
@@ -74,7 +76,7 @@
 
 
     <script src="./js/header.js"></script>
-    <script src="./js/script.js"></script>  
+    <script src="./js/event.js"></script>  
     <script src="./js/footer.js"></script>
     <script src="./js/addNews.js"></script>
 </body>

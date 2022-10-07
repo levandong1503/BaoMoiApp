@@ -1,5 +1,9 @@
-let newsId = localStorage.getItem("update");
+/*block not permision*/
+if(document.cookie == ''){
+    window.location = "./index.html"
+}
 
+let newsId = localStorage.getItem("update");
 
 function contentHandler(s){
     

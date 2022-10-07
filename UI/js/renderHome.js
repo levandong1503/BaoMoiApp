@@ -1,7 +1,5 @@
 if (document.title == "Home") {
 
-    
-
 
 
     let headCnt = document.getElementsByClassName("big-cnt-pe")[0];
@@ -9,6 +7,7 @@ if (document.title == "Home") {
     let listCnt = document.getElementsByClassName("manage-cate")[0];
     let mainBigCnt = ""
     let idMainBigCnt = 0;
+    
     fetch("https://127.0.0.1:5001/api/News/test")
         .then((res) => res.json())
         .then((resjson) => {
@@ -18,7 +17,7 @@ if (document.title == "Home") {
                     mainBigCnt = `
                                     
 
-                                        <div class="img-hover-zoom">
+                                        <div onclick="newsDetail(event)" id="${item.id}" class="img-hover-zoom">
                                             <a href="#"  value="./newsDetail">
                                                 <img src="${item.img}"
                                                     alt="">
@@ -40,9 +39,9 @@ if (document.title == "Home") {
                                     <div class="small-cnt-pe" id="${item.id}" onclick="newsDetail(event)">
                                         <div class="img-hover-zoom"><img src="${item.img}" alt=""></div>
                                             <div class="small-cnt-pe-right">
-                                                <a href="" class="text-hover">${item.title}</a>
+                                                <a class="text-hover">${item.title}</a>
                                                     <div class="post-footer">
-                                                        <a href="#"><img class="img-news " src="./Images/bao-giao-du-thoi-dai.png" alt=""></a>
+                                                        
                                                         <span>${item.createAt}</span>
                                                         <i class="fa-thin fa-clock"></i>
                                                     </div>
@@ -60,19 +59,23 @@ if (document.title == "Home") {
             
             // cac bai bao phia duoi
             let categoryCnt = resjson.dataCate.map( (item, index) => {
-                let headerCroup = `
+                let headerGroup='';
+                let cateDetail=''
+                if(item.data.length != 0){
+                    headerGroup = `
                                             <div class="header-cate">
                                                 <p class="article-group-title">
                                                     <a href="#"> ${item.category}</a>
                                                 </p>
                                             </div>
                                 `
-                let cateDetail = item.data.map( (item,index) => {
+                    cateDetail = item.data.map( (item,index) => {
                         return (
                             `
+                            
                                         <div class="${(index+1)%3==0?"bottom-other-end":"bottom-other"}" id="${item.id}" onclick="newsDetail(event)">
                                             <div class="bt-o-img img-hover-zoom">
-                                                <a href="#"><img src="${item.img}" alt=""></a>
+                                                <img src="${item.img}" alt="">
                                             </div>
                                             <div class="bt-o-right">
                                                 <a href="#" class="text-hover">${item.title}</a>
@@ -81,18 +84,20 @@ if (document.title == "Home") {
                                                 </div>
                                             </div>
                                         </div>
-                            `
+                            
+                                        `
 
                         )
 
                             
                 }).join("\n");
+                }
                 
-                return headerCroup + "<section class=\"list-news-cate\">"+cateDetail+'</section>';
-
+                if(headerGroup && cateDetail != []) 
+                    return headerGroup + "<section class=\"list-news-cate\">"+cateDetail+'</section>';
             });
 
-
+            
             listCnt.innerHTML = categoryCnt.join("\n");
         })
 }
